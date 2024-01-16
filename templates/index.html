@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <head>
   <title>OpenAI Quickstart</title>
   <link
@@ -18,4 +18,69 @@
   {% if result %}
   <div class="result">{{ result }}</div>
   {% endif %}
+</body>-->
+<!DOCTYPE html>
+<head>
+  <title>Guess Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <header><h1>Guess Game</h1></header>
+  <main>
+    <div id = "content">
+      <div id = "gpt">
+        <div id = "question">
+          <div id = "container">
+            <div id = "title">
+              <h1>Question</h1>
+            </div>
+            <div id = "text">
+              <p>what is this</p>
+            </div>
+          </div>
+        </div>
+        <div id = "answer">
+          <div id = "container">
+            <div id = "title">
+              <h1>Answer</h1>
+            </div>
+            <div id = "text">
+              <div>
+              <p>Its cat</p>
+              <button>Its right</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form>
+        <div id = "player">
+          <div id = "player-input">
+            <!--
+            <fieldset>
+                <div id = "choice-1">
+                  <input type="radio" id="choice-1-input" name="gender" value="male" />
+                  <label for="choice-1-input" >male</label>
+                </div>
+                <div id = "choice-2">
+                  <input type="radio" id="choice-2-input" name="gender" value="female" />
+                  <label for="choice-2-input">female</label>
+                </div>
+                <div id = "choice-3">
+                  <input type="radio" id="choice-3-input" name="gender" value="other" />
+                  <label for="choice-3-input">other</label>
+                </div>
+            </fieldset>
+            -->
+            <input id = "player-text" type = "text" placeholder = "write down your answer here">
+          </div>
+          <div id = "player-button">
+            <button type = "submit">Send</button>
+          </div>
+        </div> 
+      </form>
+    </div>
+  </main>
+  <footer></footer>
 </body>

@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: "ColfaxAI";
   src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
       format("woff2"),
@@ -63,4 +63,186 @@ input[type="submit"] {
 .result {
   font-weight: bold;
   margin-top: 40px;
+}*/
+
+body{
+  background-color: #ffffff;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
 }
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a0e6ec;
+  text-align: center;
+  height: 15vh;
+  color: white;
+  font-size: 1.5em;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#content{
+  width: 80%;
+  height: 75vh;
+}
+#gpt{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+}
+
+#question{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container{
+  border: 7.5px solid	#94f2f4;
+  border-radius: 30px;
+  width: 90%;
+  height: 90%;
+}
+
+#title{
+  border-top-right-radius: 21.5px;
+  border-top-left-radius: 21.5px;
+  margin: 0px;
+  background-color: #d0eceb;
+  height: 20%;
+}
+
+#question h1{
+  margin: 0px;
+  padding: 20px;
+}
+
+#text{
+  border-bottom-right-radius: 21.5px;
+  border-bottom-left-radius: 21.5px;
+  margin: 0px;
+  background-color: #ecfffd;
+  height: 80%;
+}
+
+#question p{
+  margin: 0px;
+  padding: 20px;
+}
+
+#answer{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#answer h1{
+  margin: 0px;
+  padding: 20px;
+}
+
+#answer p{
+  margin: 0px;
+  padding: 20px;
+}
+
+#text > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#text button{
+  border: 0px;
+  width: 100%;
+  height: 20%;
+  background-color: #d0eceb;
+  border-bottom-right-radius: 21.5px;
+  border-bottom-left-radius: 21.5px;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#player{
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+#player fieldset{
+  border: 0px;
+  width: 95%;
+  height: 95%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 7.5px solid	#94f2f4;
+  border-radius: 30px;
+  background-color: #ecfffd;
+}
+
+#player input[type="radio"]{
+  width: 20px;
+  height: 20px;
+}
+
+#player label{
+  position: relative;
+  font-size: large;
+  bottom: 5px;
+}
+
+#player-input{
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#player-button{
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#player-text{
+  border: 7.5px solid	#94f2f4;
+  border-radius: 30px;
+  background-color: #ecfffd;
+  width: 100%;
+  height: 80%;
+  font-size: large;
+  padding-left: 40px;
+}
+
+#player button{
+  border: 7.5px solid	#a0e6ec;
+  border-radius: 30px;
+  background-color: #a0e6ec;
+  width: 95%;
+  height: 95%;
+  font-size: large;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
