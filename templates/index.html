@@ -19,6 +19,7 @@
   <div class="result">{{ result }}</div>
   {% endif %}
 </body>-->
+
 <!DOCTYPE html>
 <head>
   <title>Guess Game</title>
@@ -36,7 +37,7 @@
               <h1>Question</h1>
             </div>
             <div id = "text">
-              <p>what is this</p>
+              <p>{{ question }}</p>
             </div>
           </div>
         </div>
@@ -47,14 +48,16 @@
             </div>
             <div id = "text">
               <div>
-              <p>Its cat</p>
-              <button>Its right</button>
+              <p>{{ answer }}</p>
+              <form action = "/" method = "post">
+                <input type="submit" value="Its right" name="reset"/>
+              </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <form>
+      <form action = "/" method = "post">
         <div id = "player">
           <div id = "player-input">
             <!--
@@ -73,7 +76,7 @@
                 </div>
             </fieldset>
             -->
-            <input id = "player-text" type = "text" placeholder = "write down your answer here">
+            <input id = "player-text" name = "input" type = "text" placeholder = "write down your answer here">
           </div>
           <div id = "player-button">
             <button type = "submit">Send</button>
