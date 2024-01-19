@@ -48,9 +48,9 @@
             </div>
             <div id = "text">
               <div>
-              <p>{{ answer }}</p>
-              <form action = "/" method = "post">
-                <input type="submit" value="Its right" name="reset"/>
+              <p id = "answer-text">{{ answer }}</p>
+              <form onsubmit="return false;">
+                <input type="submit" value="Its right" id = "check-button" onclick = "happyRobot()"/>
               </form>
               </div>
             </div>
@@ -79,11 +79,40 @@
             <input id = "player-text" name = "input" type = "text" placeholder = "write down your answer here">
           </div>
           <div id = "player-button">
-            <button type = "submit">Send</button>
+            <button type = "submit" id = "send">Send</button>
           </div>
         </div> 
       </form>
     </div>
   </main>
   <footer></footer>
+  <script>
+    function happyRobot(){
+      alert("Happy, Happy, Happy (inserting happy cat image)");
+    }
+    e = document.getElementById("send");
+    e.disabled = true;
+    answer = document.getElementById("answer-text");
+    check = document.getElementById("check-button");
+    check.style.display = "none";
+    if(answer.innerHTML != ""){
+      check.style.display = "block";
+      e.name = "reset";
+      e.innerHTML = "Reset";
+      e.disabled = false;
+    }else{
+      recent = 20;
+      function tmp(){
+        e.innerHTML = recent;
+        recent -= 1;
+        if(recent >= 0){
+          setTimeout(tmp, 1000);
+        }else{
+          e.innerHTML = "Send";
+          e.disabled = false;
+        }
+      }
+      tmp(20);
+    }
+  </script>
 </body>
