@@ -9,14 +9,14 @@
 3. Navigate into the project directory:
 
    ```bash
-   $ cd openai-quickstart-python
+   $ cd guessgame
    ```
 
 4. Create a new virtual environment:
 
    ```bash
    $ python -m venv venv
-   $ . venv/bin/activate
+   $ . venv/Scripts/activate
    ```
 
 5. Install the requirements:
